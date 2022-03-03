@@ -12,7 +12,7 @@ let terminado = false
 function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight)+"px";
-    window.scrollTo(0,1000);
+    window.scrollTo(0, document.body.scrollHeight); 
 
 }
 
