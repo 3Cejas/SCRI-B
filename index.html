@@ -1,7 +1,7 @@
 <html lang="es"> 
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RMSA</title>
+    <title>SCRB</title>
 		<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<link rel="stylesheet" type="text/css" href="index.css"> 
@@ -12,7 +12,8 @@
 	</head>
 	
 	<body>
-    <pre id="containerascii" class="ascii">
+    <div class="ascii">
+    <pre id="containerascii" >
 
   _____  _____ _____  ____  
  / ____|/ ____|  __ \|  _ \ 
@@ -21,17 +22,45 @@
  ____) | |____| | \ \| |_) |
 |_____/ \_____|_|  \_\____/ 
                                  
-<center>RIMASIA<br>powered by 3 Cejas</center>                                              
+<center>Escribe<br>powered by 3 Cejas</center>                                              
    </pre>
    <script src="index.js"></script>
-   <center>
-          <textarea id = "texto" placeholder="Comienza a escribir..." spellcheck="false" oninput="auto_grow(this)" onkeyup="countChars(this);" onkeydown="countChars(this);"></textarea>
-          <p id="puntos">0 puntos</p>
-          <p id="nivel"> nivel 1</p>
-          <p id="objetivo"> 50 palabras</p>
-          <textarea id="resultado" disabled="true"></textarea>
-        </center>
-        
-    </body>
+   <pre class="neon">
+  _____  _____ _____  ____  
+ / ____|/ ____|  __ \|  _ \ 
+| (___ | |    | |__) | |_) |
+ \___ \| |    |  _  /|  _ < 
+ ____) | |____| | \ \| |_) |
+|_____/ \_____|_|  \_\____/ 
+                                   
+  </pre>
+   <script src="index.js"></script>
+   <script>var tx = document.querySelector(".neon");
+    var change = 0
+    function changeColor(){
+      if(change == 0){
+        tx.style.color= '#FE575F';
+        change = 1
+      }
+      else{
+        tx.style.color= '#000000';
+        change = 0
+      }
+    }
+    
+    setInterval(changeColor,2500);</script>
+          <textarea id = "texto" placeholder="Comienza a escribir..." spellcheck="false" oninput="auto_grow(this)" onkeyup="countChars(this);" onkeydown="countChars(this);" onkeypress="process(event, this)"></textarea>
+          <br><br>
+          <center>
+          <table class="right"><tr>
+          <th id="puntos"">0 puntos</th>
+          <th id="nivel">nivel 0</th>
+          <th id="objetivo">500 palabras</th>
+          </tr></table>
+          <p id="palabra"></p></center>
+          
 
+
+    
+    </body>
 </html>
