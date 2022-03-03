@@ -92,9 +92,6 @@ table{
   }
 
   @media only screen and (max-width: 650px) {
-    body.keyboard {
-      height: calc(100% + 1000px); /* add padding for keyboard */
-  }
     body {
       font-size: 9pt;
       padding-top: 15px;
