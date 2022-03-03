@@ -13,12 +13,14 @@ function process(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) { //Enter keycode
         window.scrollTo(0, document.body.scrollHeight); 
+        (window).on('scroll', onScroll); 
     }
 }
 function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight)+"px";
-    window.scrollTo(0, document.body.scrollHeight); 
+    window.scrollTo(0, document.body.scrollHeight);
+    (window).on('scroll', onScroll); 
 
 }
 
