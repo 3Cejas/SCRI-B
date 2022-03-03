@@ -8,6 +8,7 @@ let palabra_actual = ""
 let puntos_palabra = 0
 let terminado = false
 
+
 function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight)+"px";
