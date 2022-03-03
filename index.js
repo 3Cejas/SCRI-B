@@ -12,7 +12,6 @@ let terminado = false
 function process(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 13) { //Enter keycode
-        alert("Sending your Message : " + document.getElementById('txt').value);
         window.scrollTo(0, document.body.scrollHeight); 
     }
 }
