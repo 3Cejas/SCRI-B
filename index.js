@@ -1,7 +1,7 @@
 let borrado
 let rapidez_borrado = 3000
 let rapidez_inicio_borrado = 3000
-let palabras_objetivo = 500
+let palabras_objetivo = 5000
 let lista_palabras = ["casa", "reloj", "montaña"]
 let asignada = false
 let palabra_actual = ""
@@ -11,7 +11,7 @@ let terminado = false
 function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight)+"px";
-    window.scrollBy(0,1);
+    window.scrollTo(0,1000);
 
 }
 
